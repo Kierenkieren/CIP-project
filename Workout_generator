@@ -1,0 +1,52 @@
+import random
+
+BIG_MOVEMENTS = ['Deficit deadlift','Glute bridge','Squat','Deadlift']
+CORE = ['Bodyweight hyperextensions', 'Hanging leg raises' , 'Lateral wood chop', 'Lateral wood chop heavy', 'Hyperextensions']
+ACCESSORY_LEGS = ['Goblet squat', 'Sled', 'Hamstring curls', 'Bulgarian split squats', 'Single leg glute bridge', 'Fire hydrant', 'Lunges', 'Step ups' ]
+UPPER_BODY = ['Banded pull up', 'Tricep dips', 'Underhand lat pulldown', 'Box pushup', 'Pull up simulator', 'Triceps Extensions', 'Lat pulldown', 'Bicep curl', 'Bench press', 'Overhead press']
+
+#open files
+#big = open(BIG_MOVEMENTS)
+#core = open(CORE)
+
+
+
+#get index of lists
+big_movements_index = len(BIG_MOVEMENTS) - 1
+core_index = len(CORE) - 1
+accessory_legs_index = len (ACCESSORY_LEGS) - 1
+upper_body_index = len (UPPER_BODY) - 1
+
+
+#get random exercises for Workout A
+
+workout_A_big_random_index = random.randint(0,big_movements_index)
+workout_A_big_choice = BIG_MOVEMENTS[workout_A_big_random_index]
+
+workout_A_core_random_index = random.randint(0,core_index)
+workout_A_core_choice = CORE[workout_A_core_random_index]
+
+workout_A_legs_random_index = random.randint(0,accessory_legs_index)
+workout_A_legs_choice = ACCESSORY_LEGS[workout_A_legs_random_index]
+
+workout_A_upperbody_random_index = random.randint(0,upper_body_index)
+workout_A_upperbody_choice = UPPER_BODY[workout_A_upperbody_random_index]
+
+#get exercise for Workout B
+workout_B_big_random_index = random.randint(0,big_movements_index)
+workout_B_big_choice = BIG_MOVEMENTS[workout_B_big_random_index]
+
+workout_B_core_random_index = random.randint(0,core_index)
+workout_B_core_choice = CORE[workout_B_core_random_index]
+
+workout_B_legs_random_index = random.randint(0,accessory_legs_index)
+workout_B_legs_choice = ACCESSORY_LEGS[workout_B_legs_random_index]
+
+workout_B_upperbody_random_index = random.randint(0,upper_body_index)
+workout_B_upperbody_choice = UPPER_BODY[workout_B_upperbody_random_index]
+
+#compile Workout A and B
+print('Your workout schedule for the week:\n' + 'Workout A:\n'+ workout_A_big_choice +'\n' + workout_A_legs_choice + '\n' + workout_A_upperbody_choice +'\n'
+       + workout_A_core_choice)
+print('Workout B:\n'+ workout_B_big_choice +'\n' + workout_B_legs_choice + '\n' + workout_B_upperbody_choice +'\n'
+       + workout_B_core_choice)
